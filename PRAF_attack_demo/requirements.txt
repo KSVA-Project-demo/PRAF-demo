@@ -1,0 +1,37 @@
+# --- Core Deep Learning Framework ---
+# PyTorch is required for the differentiable physical simulation layer and gradient calculation.
+torch>=2.0.0
+torchvision>=0.15.0
+torchaudio>=2.0.0
+
+# --- Model Architectures (Substitutes & Targets) ---
+# 'transformers' is needed for SegFormer and Mask2Former.
+transformers>=4.30.0
+# 'timm' is often a dependency for vision transformers.
+timm>=0.9.0
+# Provides easy access to pretrained DeepLabV3+ and PSPNet architectures.
+segmentation-models-pytorch>=0.3.3
+
+# --- Metrics & Loss Functions ---
+# Essential: Used in Eq. (7) for the Stealthiness Loss (L_stealth).
+lpips>=0.1.4
+# For calculating SSIM and PSNR as mentioned in Table 3.
+scikit-image>=0.21.0
+# For calculating FID score mentioned in Table 3.
+pytorch-fid>=0.3.0
+
+# --- Image Processing & Data Handling ---
+# Basic image manipulation (loading Cityscapes, resizing, etc.).
+numpy>=1.24.0
+pillow>=10.0.0
+# Used for some standard image filtering comparisons or pre-processing.
+opencv-python>=4.8.0
+
+# --- Visualization & Utilities ---
+# For plotting the ASR curves (Fig 4) and visualizing patches (Fig 3).
+matplotlib>=3.7.0
+# Progress bar for training loops.
+tqdm>=4.65.0
+# For data manipulation and saving result tables (Table 1, 2, etc.).
+pandas>=2.0.0
+scipy>=1.10.0
